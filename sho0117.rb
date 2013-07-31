@@ -3,6 +3,6 @@
 
 class Classsho0117
   def func
-    puts '星野翔'
+    puts '星野翔２'
   end
 end
