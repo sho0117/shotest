@@ -1,5 +1,7 @@
 Home::Application.routes.draw do
 
+  resources :admins
+
 get "home" => "homepage#home"
 
 
