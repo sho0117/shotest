@@ -1,0 +1,7 @@
+<% form_for(@users) do |f| %>
+<%= f.error_messages %>
+<%= f.radio_button :name ,'kashi' %>
+<%= f.text_field :event %>
+<%= f.submit "Login" %>
+<% end %>
+

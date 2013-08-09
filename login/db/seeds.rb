@@ -1,7 +1,7 @@
 # coding: utf-8
 
-Event.create(:name => 'オープンキャンパス', :date => '2011-06-28')
-Event.create(:name => '工大祭', :date => '2011-11-14')
+Title.create(:name => '宇宙に行った日', :sales_date => '2011-06-28')
+Title.create(:name => '観察日記', :sales_date => '2011-11-14')
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
@@ -10,5 +10,3 @@ Event.create(:name => '工大祭', :date => '2011-11-14')
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-

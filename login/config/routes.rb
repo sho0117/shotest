@@ -1,9 +1,9 @@
-Home::Application.routes.draw do
+Login::Application.routes.draw do
 
-get "home" => "homepage#home"
-get "user" => "homepage#user"
+  match 'hello' => 'booklist#hello'
+  match 'bye' => 'booklist#bye'
 
-get "admin" => "admins#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
