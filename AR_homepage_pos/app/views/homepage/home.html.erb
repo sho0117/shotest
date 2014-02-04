@@ -1,0 +1,93 @@
+<tr><td><table width="900" height="300" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr><td width="191" valign="top" bgcolor="#CCFFCC"><br>
+<table width="181" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr><td height="27" background="/image/side_green.png"><div class="side_title">講義棟</div></td></tr>
+<tr><td>
+1101~1104<br>
+1201~1204<br>
+1301~1304<br>
+1401~1404<br>
+</td></tr>
+<br>
+</td></tr></table>
+<br>
+<table width="181" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr><td height="27" background="/image/side_green.png"><div class="side_title">研究棟</div></td></tr>
+<tr><td>
+知能情報工学分野<br>
+システム創成情報工学分野<br>
+生命情報工学分野<br>
+電子情報工学分野<br>
+機械情報工学分野<br>
+</td></tr></table>
+<br>
+<table width="181" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr><td height="27" background="/image/side_green.png"><div class="side_title">体育館</div></td></tr>
+<tr><td>
+大ホール<br>
+武道場<br>
+トレーニング室<br>
+プール<br>
+</td></tr></table>
+<br>
+<table width="181" border="0" align="center" cellpadding="0" cellspacing="0"><tr><td height="27" background="/image/side_green.png"><div class="side_title">研究管理棟</div></td></tr>
+<tr><td>
+教務係・大学院係・学生係<br>
+保健センター<br>
+キャリアセンター<br>
+情報科学センター<br>
+</td></tr></table>
+<br>
+<table width="181" border="0" align="center" cellpadding="0" cellspacing="0"><tr><td height="27" background="/image/side_green.png"><div class="side_title">キャリアセンター</div></td></tr>
+<tr><td>
+<br>
+</td></tr></table>
+<br></td>
+
+<td width="709" valign="top" align="center"><br><table width="709" border="0" align="center" cellpadding="0" cellspacing="0" style="border-color:#5FA9F9; border-width:1px; border-style:solid;">
+
+<table width="700" border=1 bordercolor="CCFFCC">
+<tr>
+<td width="700" height="35" background="/image/title_green.png"><div class="main_title"> <font size="5" color="#FFFFFF">講義棟</font></div>
+</td></tr>
+
+
+<tr><td>
+<table align="center">
+<tr><td>
+<p><img usemap="#Map" src="http://www.iizuka.kyutech.ac.jp/kit/wp-content/uploads/2012/02/ee1dc5f0d907bb1df6c0f2e8589f0fd0.jpg" border="0" alt="" width="500" height="350" /></p>
+</td></tr>
+</table>
+</td></tr>
+
+<tr>
+<td width="700" height="26" background="/image/title_green.png"><div class="main_title"> <font color="#FFFFFF">イベント</font></div>
+</td></tr>
+
+<tr><td>
+<table>
+<% @admins.each do |admin| %>
+  <tr>
+    <td width="100"><%= link_to admin.date, :controller => "homepage", :action => "event", :id => admin.id %></td>
+    <td width="600"><%= link_to admin.name, :controller => "homepage", :action => "event", :id => admin.id %></td>
+  </tr>
+<% end %>
+</table>
+<br><br></td></tr>
+
+</table>
+
+<table valign="bottom">
+<tr valign="bottom">
+<td width="709" valign="bottom">
+<br><br><br><br><br><br><br<br>
+<h2>このホームページについて</h2>
+<div class="main">
+・ご利用に当たり~の削除は禁止です。<br>
+・マナーを守ってご利用下さい。<br>
+　　など書くのかな？
+</div></td></tr>
+</table>
+
+</td></tr>
+

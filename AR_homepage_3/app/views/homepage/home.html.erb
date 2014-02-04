@@ -1,0 +1,53 @@
+<tr><td><table width="900" border="1" bordercolor="#000080" align="center" cellpadding="0" cellspacing="0">
+<tr><td width="191" valign="top" bgcolor="#FFFFFF">
+<table width="190" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr><td><%= link_to image_tag('/image/contents.gif'), {:controller => "homepage", :action => "home"} %></td></tr>
+<tr><td><%= link_to image_tag('/image/mapside.png'), {:controller => "homepage", :action => "map"} %></td></tr>
+<tr><td><%= link_to image_tag('/image/kougiside.png'), {:controller => "homepage", :action => "kougi"} %></td></tr>
+<tr><td><%= link_to image_tag('/image/labside.png'), {:controller => "homepage", :action => "lab"} %></td></tr>
+<tr><td><%= link_to image_tag('/image/undoside.png'), {:controller => "homepage", :action => "undo"} %></td></tr>
+</table>
+<br></td>
+
+<td width="709" valign="top"><br>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" >
+<tr>
+<td height="35" background="/image/title03.png"><div class="main_title"> EVENT </div></td></tr>
+
+<tr><td>
+<table>
+<% @admins.each do |admin| %>
+  <tr>
+    <td width="100"><%= link_to admin.date, :controller => "homepage", :action => "event", :id => admin.id %></td>
+    <td width="600"><%= link_to admin.name, :controller => "homepage", :action => "event", :id => admin.id %></td>
+  </tr>
+<% end %>
+</table>
+<br><br></td></tr>
+
+<tr>
+<td height="35" background="/image/title03.png"><div class="main_title"> TOPICS </div></td></tr>
+
+<tr><td><br><br><br><br></td></tr>
+
+<tr>
+<td height="35" background="/image/title03.png"><div class="main_title"> PRESS SCRAP </div></td></tr>
+
+<tr><td><br><br><br><br></td></tr>
+
+</table>
+
+<table valign="bottom">
+<tr valign="bottom">
+<td width="709" valign="bottom">
+<br><br><br><br><br><br><br<br>
+<h2>このホームページについて</h2>
+<div class="main">
+・ご利用に当たり~の削除は禁止です。<br>
+・マナーを守ってご利用下さい。<br>
+　　など書くのかな？
+</div></td></tr>
+</table>
+
+</td></tr>
+

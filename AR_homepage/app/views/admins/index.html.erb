@@ -1,10 +1,8 @@
-<h1>Hello</h1>
-<p>
-九州工業大学情報工学部イベント入力
-</p>
-
-<p>
-<% @events.each do |event| %>
-[タイトル] <%= event.name %>, [日付] <%= event.date %><br />
+<% form_for(@events) do |f| %>
+<%= f.error_messages %>
+<%= f.text_field :name %>
+<%= f.text_field :date %>
+<%= f.text_field :text %>
+<%= f.submit "Create" %>
 <% end %>
-</p>
+

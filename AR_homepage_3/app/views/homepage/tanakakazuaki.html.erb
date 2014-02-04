@@ -1,0 +1,71 @@
+
+<tr><td><table width="900" height="300" border="1" bordercolor="#000080" align="center" cellpadding="0" cellspacing="0">
+<tr><td width="191" valign="top" bgcolor="#FFFFFF">
+<table width="190" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr><td><%= link_to image_tag('/image/contents.gif'), {:controller => "homepage", :action => "home"} %></td></tr>
+<tr><td><%= link_to image_tag('/image/mapside.png'), {:controller => "homepage", :action => "map"} %></td></tr>
+<tr><td><%= link_to image_tag('/image/kougiside.png'), {:controller => "homepage", :action => "kougi"} %></td></tr>
+<tr><td><%= link_to image_tag('/image/labside.png'), {:controller => "homepage", :action => "lab"} %></td></tr>
+<tr><td><%= link_to image_tag('/image/undoside.png'), {:controller => "homepage", :action => "undo"} %></td></tr>
+</table>
+<br></td>
+
+
+<td width="709" valign="top" align="center"><br><table width="709" border="0" align="center" cellpadding="0" cellspacing="0" style="border-color:#5FA9F9; border-width:1px; border-style:solid;">
+
+<table width="700" border=1 bordercolor="CCFFCC">
+<tr><td width="700" height="26" background="/image/title_green.png"><div class="main_title"><font size="4" color="#FFFFFF"> 田中 和明　研究室 </font></div>
+</td></tr>
+<tr><td>
+<table>
+<tr><td><img src="image/tanakakazuaki.png"></td><td><img src="image/tanakakazuakilab.gif" width="320" height="180"></td>
+</tr></table>
+<br>
+<br>
+<font size="4" color="blue">研究内容</font>
+<table>
+<tr><td width="500">
+【基本的な研究】
+移動ロボットが、自身で環境を認識しながら、人の活動を支援するシステムを開発しています。カメラからの画
+像や、音波などを併用する環境認識、人がロボットを簡単に操作できるようにするためのユーザインターフェー
+スなど、ロボットに必要な機能に関して、研究を行っています。
+【直近の研究】『超音波の高機能化』
+①超音波による３次元計測光を使えないところでのカメラ
+②超音波による金属加工超音波エネルギーの強力化
+『チップの組込み』Ruby (オープンソースのオブジェクト指向スクリプト言語) を、車やエレベータなどの装置
+に組み込む
+</td>
+<td width="200" align="center">
+<img src="image/mruby.png" width="150" height="150">
+</td></tr>
+ </table>
+<br>
+
+<table align="center" border="1" bordercolor="#000000" cellspacing="0">
+<tr><td width="150" bgcolor="#FF0000" align="center">在室</td><td width="150" bgcolor="#FF0000" align="center">学内</td><td width="150" bgcolor="#FF0000" align="center">帰宅</td></tr>
+<tr><td width="150" align="center"></td><td width="150" align="center">○</td><td width="150" align="center"></td></tr>
+</table>
+
+
+</td></tr>
+<tr><td width="700" height="26" background="/image/title_green.png"><div class="main_title"><font size="4" color="#FFFFFF"> イベント </font></div>
+</td></tr>
+
+<tr><td align="center">
+
+<table>
+<% @admins.each do |admin| %>
+
+  <tr>
+<% if admin.place=="2" %>
+    <td width="100"><%= link_to admin.date, :controller => "homepage", :action => "event", :id => admin.id %></td>
+    <td width="600"><%= link_to admin.name, :controller => "homepage", :action => "event", :id => admin.id %></td>
+  </tr>
+<% end %>
+<% end %>
+</table>
+<br><br>
+
+</td></tr></table>
+
+</td></tr>

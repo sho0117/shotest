@@ -1,0 +1,55 @@
+<table width="931" border="0" align="center" cellpadding="0" cellspacing="0" background="image/bg6.png">
+<tr>
+<td>
+
+<table width="900" height="47" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr><td bgcolor="#000080"></td></tr>
+</table>
+
+<table width="900" height="65" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr><td width="438" valign="top" background="image/head5.jpg"></td>
+<td width="462" > <marquee scrollamount="10" width=460><font color=red size=4>~管理者画面~</font></marquee></td></tr>
+</table>
+
+<table width="900" height="159" border="0" align="center" cellpadding="0" cellspacing="0" background="image/koho.png">
+</table>
+
+<table width="900" border="0" align="center" cellpadding="0" cellspacing="0" >
+<tr><td>
+<table width="700" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="35" background="image/title03.png">イベント管理</td></tr></table>
+</td></tr></table>
+
+<table width="900" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <th>イベント名</th>
+    <th>日付</th>
+    <th>内容</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admins.each do |admin| %>
+  <tr>
+    <td><%= admin.name %></td>
+    <td><%= admin.date %></td>
+    <td><%= admin.text %></td>
+    <td><%= link_to 'Show', admin %></td>
+    <td><%= link_to 'Edit', edit_admin_path(admin) %></td>
+    <td><%= link_to 'Destroy', admin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+<tr><td><br><br><%= link_to 'New Event', new_admin_path %>
+<br><br><br><br><br>
+</td></tr>
+</table>
+
+
+
+<table width="900" height="40" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#000080">
+<tr><td align="center"><%= link_to 'HOME', {:controller => "homepage", :action => "home"}, :style => "color:white;" %></td></tr></table>
+
+
+
+</td></tr></table>

@@ -1,0 +1,55 @@
+
+<tr><td><table width="900" height="300" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr><td width="191" valign="top" bgcolor="#B6D6F9"><br>
+<table width="181" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr><td height="27" background="/image/side.png"><div class="side_title">イベント一覧</div></td></tr>
+<tr><td>
+<table>
+<% @admins.each do |admin| %>
+  <tr>
+    <td width="600"><%= link_to admin.name, :controller => "homepage", :action => "event", :id => admin.id %></td>
+</tr>
+<% end %>
+</table>
+</td></tr>
+<br>
+<table width="181" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr><td height="27" background="/image/side.png"><div class="side_title">トピック一覧</div></td></tr>
+<tr><td>
+<br><br><br>
+</td></tr></table>
+<br>
+<table width="181" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr><td height="27" background="/image/side.png"><div class="side_title">ニュース一覧</div></td></tr>
+<tr><td>
+<br><br><br>
+</td></tr></table>
+<br></td>
+<td width="709" valign="top" align="center"><br><table width="709" border="0" align="center" cellpadding="0" cellspacing="0" style="border-color:#5FA9F9; border-width:1px; border-style:solid;">
+
+<table width="700" border=1 bordercolor="CCFFFF">
+<tr>
+<td width="700" height="26" background="/image/titlebg.png"><div class="main_title"> <%= @id.name %> </div>
+</td></tr>
+
+<tr><td>
+<table>
+<tr><td>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>日付：</b>
+  <%= @id.date %>
+</p>
+<p>
+  <b>内容：</b>
+  <%= @id.text %>
+</p>
+
+</td></tr>
+
+</table>
+
+</td></tr></table>
+
+</td></tr>

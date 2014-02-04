@@ -1,0 +1,36 @@
+<%= form_for(@admin) do |f| %>
+  <% if @admin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin.errors.count, "error") %> prohibited this admin from being saved:</h2>
+
+      <ul>
+      <% @admin.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<div class="field">
+  イベント名<br />
+  <%= f.text_field :name %>
+</div>
+<div class="field">
+  日付<br />
+  <%= f.datetime_select :date %>
+</div>
+<div class="field">
+  内容<br />
+  <%= f.text_area :text %>
+</div>
+<div class="field">
+  施設場所<br />
+<%= f.select :place, [["講義棟", "1"], ["研究棟", "2"],["運動施設", "3"]],  :prompt => "選択してください" %>
+</div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

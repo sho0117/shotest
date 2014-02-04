@@ -1,0 +1,50 @@
+
+<tr><td><table width="900" height="300" border="1" bordercolor="#000080" align="center" cellpadding="0" cellspacing="0">
+<tr><td width="191" valign="top" bgcolor="#FFFFFF">
+<table width="190" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr><td><%= link_to image_tag('/image/contents.gif'), {:controller => "homepage", :action => "home"} %></td></tr>
+<tr><td><%= link_to image_tag('/image/mapside.png'), {:controller => "homepage", :action => "map"} %></td></tr>
+<tr><td><%= link_to image_tag('/image/kougiside.png'), {:controller => "homepage", :action => "kougi"} %></td></tr>
+<tr><td><%= link_to image_tag('/image/labside.png'), {:controller => "homepage", :action => "lab"} %></td></tr>
+<tr><td><%= link_to image_tag('/image/undoside.png'), {:controller => "homepage", :action => "undo"} %></td></tr>
+</table>
+<br></td>
+<td width="709" valign="top" align="center"><br><table width="709" border="0" align="center" cellpadding="0" cellspacing="0" style="border-color:#5FA9F9; border-width:1px; border-style:solid;">
+
+<table width="700" border=1 bordercolor="CCFFCC">
+<tr><td width="700" height="26" background="/image/title_green.png"><div class="main_title"><font size="4" color="#FFFFFF"> 1201教室 </font></div>
+</td></tr>
+<tr><td>
+<table width="620" align="center">
+<tr><td width="620" height="26" background="/image/titlebg1.png"><div class="main_title"><font size="3" color="#000000"> 1201教室時限表 </font></div>
+</td></tr>
+</table>
+<table width="600" border="1" bordercolor="#000000" align="center" bgcolor="#FFFFE0">
+<tr><td width="100" align="center"></td><td width="100" align="center">１時限</td><td width="100" align="center">２時限</td><td width="100" align="center">３時限</td><td width="100" align="center">４時限</td><td width="100" align="center">５時限</td></tr>
+<tr><td width="100" align="center">月曜日</td><td width="100" align="center">クラスワーク302(IIF)<br>大西　圭</td><td width="100" align="center"></td><td width="100" align="center"></td><td width="100" align="center"></td><td width="100" align="center">電子物理<br>前田　佳</td></tr>
+<tr><td width="100" align="center">火曜日</td><td width="100" align="center"></td><td width="100" align="center">電磁気学Ⅱ<br>松下</td><td width="100" align="center">機械情報プロジェクトⅠ<br>許　他７名</td><td width="100" align="center">機械情報プロジェクトⅠ<br>許　他７名</td><td width="100" align="center">機械情報プロジェクトⅠ<br>許　他７名</td></tr>
+<tr><td width="100" align="center">水曜日</td><td width="100" align="center"></td><td width="100" align="center">現代物理学Ⅰ<br>木内</td><td width="100" align="center">システム制御設計論<br>古賀</td><td width="100" align="center">化学Ⅰ<br>脇坂</td><td width="100" align="center"></td></tr>
+<tr><td width="100" align="center">木曜日</td><td width="100" align="center"></td><td width="100" align="center"></td><td width="100" align="center">半導体工学<br>新海</td><td width="100" align="center">力学<br>許</td><td width="100" align="center"></td></tr>
+<tr><td width="100" align="center">金曜日</td><td width="100" align="center"></td><td width="100" align="center">応用数学<br>福田　亮</td><td width="100" align="center">ネットワークセキュリティ<br>荒木</td><td width="100" align="center"></td><td width="100" align="center"></td></tr>
+</table>
+</tr></td>
+<tr><td width="700" height="26" background="/image/title_green.png"><div class="main_title"><font size="4" color="#FFFFFF"> イベント </font></div>
+</td></tr>
+
+<tr><td align="center">
+<table>
+<% @admins.each do |admin| %>
+
+  <tr>
+<% if admin.place=="1" %>
+    <td width="100"><%= link_to admin.date, :controller => "homepage", :action => "event", :id => admin.id %></td>
+    <td width="600"><%= link_to admin.name, :controller => "homepage", :action => "event", :id => admin.id %></td>
+  </tr>
+<% end %>
+<% end %>
+</table>
+<br><br>
+
+</td></tr></table>
+
+</td></tr>

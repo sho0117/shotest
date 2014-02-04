@@ -1,0 +1,142 @@
+<!-- Copyright (C) Net Mania. All Rights Reserved. http://www.netmania.jp/ -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<!--<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">-->
+<title>K-NAVI ~Kyutech Navi~</title>
+
+<table width="931" border="0" align="center" cellpadding="0" cellspacing="0" background="/image/bg6.png">
+<tr>
+<td>
+
+<table width="900" height="47" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr align="right"><td bgcolor="#000080">
+<%= link_to image_tag('/image/K_NAVI.png'), {:controller => "homepage", :action => "home"} %>
+</td></tr>
+</table>
+
+<table width="900" height="65" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr><td width="438" valign="top" background="/image/head5.jpg"></td>
+<td width="462" > <marquee scrollamount="10" width=460><font color=blue size=4>Kyutech NAVI  〜九州工業大学案内サイト〜</font></marquee>
+ </td></tr>
+</table>
+
+
+
+
+<table width="900" height="25" border="0" align="center" cellpadding="0" cellspacing="0" background="image/menubg.png" style="BORDER-BOTTOM: #1C66BC 1px solid; BORDER-TOP: #1C66BC 1px solid;">
+<tr class="menu">
+<td width="178" style="BORDER-right: #F2F8FE 1px solid;"><%= link_to image_tag('/image/uhome.png', {:mouseover => '/image/home.png'}), {:controller => "homepage", :action => "home"} %></td>
+<td width="178" style="BORDER-right: #F2F8FE 1px solid;"><%= link_to image_tag('/image/ukyutech.png', {:mouseover => '/image/kyutech.png'}), 'http://www.iizuka.kyutech.ac.jp/' %></td>
+<td width="178" style="BORDER-right: #F2F8FE 1px solid;"><%= link_to image_tag('/image/umap.png', {:mouseover => '/image/map.png'}), {:controller => "homepage", :action => "map"} %></td>
+<td width="178" style="BORDER-right: #F2F8FE 1px solid;"><%= link_to image_tag('/image/ulink.png', {:mouseover => '/image/link.png'}), {:controller => "homepage", :action => "home"} %></td>
+<td width="178" style="BORDER-right: #F2F8FE 1px solid;"><%= link_to image_tag('/image/uask.png', {:mouseover => '/image/ask.png'}), {:controller => "homepage", :action => "home"} %></td>
+</tr></table>
+
+<table width="900" height="190" border="0" align="center" cellpadding="0" cellspacing="0" background="/image/head4.jpg">
+
+</table>
+
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-size:12px;
+	line-height:150%;
+}
+h1 {
+	color:#000000;
+	margin-top: 20px;
+	font-size:18px;
+	margin-left: 18px;
+}
+
+h2 {
+	color:#444444;
+	font-size:12px;
+	font-weight:bold;
+	padding-left: 10px;
+	BORDER-BOTTOM: #000080 2px solid;
+
+}
+
+.menu {
+	text-align:center;
+	font-size:10px;
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 0.1em;
+	filter:DropShadow(color=gainsboro offX=1 offY=1);
+}
+
+.menu a {
+	text-align:center;
+	font-size:10px;
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 0.1em;
+	filter:DropShadow(color=gainsboro offX=1 offY=1);
+	text-decoration: none;
+	color: #0066CC;
+}
+.menu visited {
+	text-align:center;
+	font-size:10px;
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 0.1em;
+	filter:DropShadow(color=gainsboro offX=2 offY=1);
+	text-decoration: none;
+	color: #0066CC;
+}
+
+.side_title {
+	color:#FFFFFF;
+	font-size:12px;
+	font-weight: bold;
+	margin-left: 9px;
+}
+.main_title {
+	color:#444444;
+	font-size:12px;
+	font-weight: bold;
+	margin-left: 10px;
+}
+.main {
+	color:#444444;
+	font-size:12px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 3px;
+	margin-bottom: 10px;
+}
+
+.side {
+	color:#333333;
+	font-size:11px;
+	margin-left: 10px;
+	line-height:180%;
+	margin-top: 5px;
+}
+
+.foot {
+	color:#333333;
+	font-size:11px;
+	margin-top: 8px;
+	line-height:180%;
+	text-align:center;
+}
+-->
+</table>
+</style></head>
+
+<body>
+<%= yield %>
+
+
+<table width="900" height="40" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#000080">
+<tr><td align="center"><%= link_to "Making by Team_AR", admins_path, :style => "color:white;" %></td></tr></table>
+
+</body>
+</html>
